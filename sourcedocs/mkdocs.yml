@@ -1,0 +1,58 @@
+site_name: DDI questionnaire modeling
+site_url: https://inseefr.github.io/ddi-questionnaire-modeling
+theme:
+  name: material
+  language: fr
+  icon:
+    logo: material/book
+  palette:
+    scheme: default
+    primary: pink
+    accent: cyan
+  features:
+    - navigation.footer
+    - navigation.indexes
+    - content.code.copy
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/InseeFr/ddi-questionnaire-modeling
+nav:
+  - Structure: "./structure"
+  - Statements: "./statements"
+  - Question bank:
+      - ALL: "./question-bank"
+      - Misc: "./question-bank/misc.md"
+  - Parameters: "./parameters"
+  - Filter: "./filter"
+  - Check: "./check"
+  - Loop: "./loop"
+  - Variable: "./variable"
+  - Derived variable: "./derived-variable"
+  - Update notes: "./update"
+markdown_extensions:
+  - admonition
+  - tables
+  - footnotes
+  - pymdownx.details
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+plugins:
+  - glightbox
