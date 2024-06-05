@@ -9,3 +9,7 @@ It is a work in progress.
 Simple contributions are made by editing markdown files located under [sourcedocs/docs](https://github.com/InseeFr/ddi-questionnaire-modeling/tree/main/sourcedocs/docs).
 
 The commited contributions are then automatically published.
+
+Of course, direct commits and/or pull requests are also a good way to contribute!
+
+You can also just provide feedback using issues.
