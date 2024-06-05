@@ -6,7 +6,7 @@
 
 !!! question "Updating this documentation"
 
-    Since the source material may not be always up to date with how we use the standard or how we implement questionnaires, those `question` blocks are here to marked when revisions or changes are needed.
+    Since the source material may not be always up to date with how we use the standard or how we implement questionnaires, those `question` blocks are here to mark when revisions or changes are needed.
 
 The questionnaire metamodel is comprised of description of the metadata necessary for constituting the questionnaire template: questions, variables, code lists, statements (instructions, help, comments, warnings) as well as the statement and question grouping and flow (question blocks), filtering and controls. This description will be based on the XML DDI (Data Description Initiative) metamodel in it current version of use.
 
