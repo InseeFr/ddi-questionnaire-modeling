@@ -38,7 +38,7 @@ To escape the rule, simply add an escape marker:
 
 ## Structure of the documentation
 
-1. The _Question bank_ section is huge, it should probably be splitted in N sub-sections (i.e. sub-pages).
+1. The _Question bank_ section is huge, it should probably be splitted in N sub-sections (i.e. sub-pages). → https://github.com/InseeFr/ddi-questionnaire-modeling/issues/2
 
 ## Graphical representations
 
