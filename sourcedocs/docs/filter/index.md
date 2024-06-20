@@ -254,7 +254,7 @@ If an instruction must appear in the PDF file generated from the DDI specificati
 
 !!! question "Updating this documentation"
 
-    XHTML reference, still relevant? :point_down:
+    ExternalAid is probably not relevant in this form :point_down:
 
 ```xml
 <d:ExternalAid>
