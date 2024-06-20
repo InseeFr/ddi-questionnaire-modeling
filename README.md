@@ -10,6 +10,8 @@ Simple contributions are made by editing markdown files located under [sourcedoc
 
 The commited contributions are then automatically published.
 
+We use [Material for MKDocs](https://squidfunk.github.io/mkdocs-material/).
+
 Of course, direct commits and/or pull requests are also a good way to contribute!
 
 You can also just provide feedback using issues.
