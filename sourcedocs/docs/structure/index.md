@@ -17,7 +17,7 @@ The box below lists the DDI elements which describe a questionnaire template:
     - A reference to a question bank used by the survey instrument(s) (DDI QuestionScheme);
     - A reference to a control construct bank (DDI ControlConstructScheme);
     - A reference to a statement bank (DDI InterviewerInstructionScheme).
-    - An instrument bank (DDI InstrumentScheme), where each instrument contains a reference to a main sequence (“level 0”) which is type a “template”.
+    - An instrument bank (DDI InstrumentScheme), where each instrument contains a reference to a main sequence (“level 0”) which is of type “template”.
 
 !!! question "Updating this documentation"
 
@@ -29,7 +29,7 @@ The box below lists the DDI elements which describe a questionnaire template:
         <r:QuestionSchemeReference/>
         <r:ControlConstructSchemeReference/>
         <r:InterviewerInstructionSchemeReference/>
-            <d:InstrumentScheme xml:lang="en-IE”>
+            <d:InstrumentScheme xml:lang="en-IE">
                 <d:Instrument>
                     <d:InstrumentName>
                         <r:String>M1</r:String>
@@ -55,7 +55,7 @@ A __module__ is a level-“1”-of-depth sequence. It is a sub-theme of the them
 ### Module in DDI
 
 A __module__ is represented by a DDI sequence, which references one or more constructs.
-It is characterised as a module through an element Type of Sequence (TypeOfSequence) which takes the value « __Module__ » from a controlled vocabulary[^1] (a codelist) delimiting the range of values allowed for describing the business parts of the questionnaire. This process is known as typing the sequence. The title of the module is the sequence label.
+It is characterised as a module through an element Type of Sequence (TypeOfSequence) which takes the value « __module__ » from a controlled vocabulary[^1] (a codelist) delimiting the range of values allowed for describing the business parts of the questionnaire. This process is known as typing the sequence. The title of the module is the sequence label.
 
 ```xml
 <d:Sequence>
