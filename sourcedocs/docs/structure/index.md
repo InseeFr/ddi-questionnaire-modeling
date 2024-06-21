@@ -14,10 +14,10 @@ The box below lists the DDI elements which describe a questionnaire template:
 
 - The StudyUnit is the top element representing a statistical operation and one to many DataCollection is associated with a data collection campaign.
 - Each DataCollection elements contains information on the data collection activities during a data collection campaign among which are the survey instruments. It contains a reference to the survey instrument component banks stored in the resource packages:
-  - A reference to a question bank used by the survey instrument(s) (DDI QuestionScheme);
-  - A reference to a control construct bank (DDI ControlConstructScheme);
-  - A reference to a statement bank (DDI InterviewerInstructionScheme).
-  - An instrument bank (DDI InstrumentScheme), where each instrument contains a reference to a main sequence (“level 0”) which is type a “template”.
+    - A reference to a question bank used by the survey instrument(s) (DDI QuestionScheme);
+    - A reference to a control construct bank (DDI ControlConstructScheme);
+    - A reference to a statement bank (DDI InterviewerInstructionScheme).
+    - An instrument bank (DDI InstrumentScheme), where each instrument contains a reference to a main sequence (“level 0”) which is type a “template”.
 
 !!! question "Updating this documentation"
 
