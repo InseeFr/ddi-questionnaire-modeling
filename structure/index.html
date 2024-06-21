@@ -546,9 +546,33 @@
 
 
 <h1 id="questionnaire-structure">Questionnaire Structure</h1>
-<blockquote>
-<p>IMG</p>
-</blockquote>
+<pre class="mermaid"><code>erDiagram
+
+    StudyUnit 
+    DataCollection
+
+    StudyUnit ||--|{ DataCollection : contains
+
+    QuestionScheme
+    InterviewerInstructionScheme
+    ControlConstructScheme
+
+    DataCollection |{--|| QuestionScheme : refers_to
+    DataCollection |{--|| ControlConstructScheme : refers_to
+    DataCollection |{--|| InterviewerInstructionScheme : refers_to
+
+    Sequence_template
+
+    DataCollection ||--|| Sequence_template : contains
+
+    Sequence_module
+
+    Sequence_template ||--|{ Sequence_module : contains
+
+    Sequence_submodule
+
+    Sequence_module ||--o{ Sequence_submodule : contains
+</code></pre>
 <h2 id="first-level-questionnaire-template">First level - Questionnaire template</h2>
 <p>A questionnaire template is the sequencing of modules. It also includes the questionnaire logic (including filtering) and coherence controls. A questionnaire template is a survey instrument related to a specific thematic issue.</p>
 <p>Questionnaire means that a questionnaire template is customised at the surveyed unit level. It is a concrete human-readable (interviewer or interviewee) representation of the questionnaire shown to a respondent. It can be either the prefilling of the principal activity of a business or the number of employees already known by the statistical institute in the case of a business survey.</p>
