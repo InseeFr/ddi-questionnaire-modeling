@@ -1,6 +1,34 @@
 # Questionnaire Structure
 
-> IMG
+```mermaid
+erDiagram
+    
+    StudyUnit 
+    DataCollection
+    
+    StudyUnit ||--|{ DataCollection : contains
+    
+    QuestionScheme
+    InterviewerInstructionScheme
+    ControlConstructScheme
+    
+    DataCollection |{--|| QuestionScheme : refers_to
+    DataCollection |{--|| ControlConstructScheme : refers_to
+    DataCollection |{--|| InterviewerInstructionScheme : refers_to
+    
+    Sequence_template
+    
+    DataCollection ||--|| Sequence_template : contains
+    
+    Sequence_module
+    
+    Sequence_template ||--|{ Sequence_module : contains
+    
+    Sequence_submodule
+    
+    Sequence_module ||--o{ Sequence_submodule : contains
+    
+```
 
 ## First level - Questionnaire template
 
