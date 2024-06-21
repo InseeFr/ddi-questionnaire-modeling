@@ -24,9 +24,9 @@ erDiagram
     
     Sequence_template ||--|{ Sequence_module : contains
     
-    Sequence_submodule
+    Sequence_sub-module
     
-    Sequence_module ||--o{ Sequence_submodule : contains
+    Sequence_module ||--o{ Sequence_sub-module : contains
     
 ```
 
