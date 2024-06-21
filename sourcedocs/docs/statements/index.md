@@ -7,6 +7,10 @@
 A __Statement__ is a generic term that designates a textual element from the questionnaire (other than the question text, response modalities…).
 The different types of statement are: comment, instruction, help, or warning.
 
+## DDI modelling of statements
+A statement is represented by a DDI [Instruction](https://ddialliance.github.io/ddimodel-web/DDI-L-3.3/item-types/Instruction/). The text displayed with the element InstructionText. 
+For typing the instruction, DDI is a little bit “twisted” with the use of the element InstructionName.
+
 ## Type of statement : « Comment »
 
 __A comment__ is a statement which conveys quite a « generic » information on the context without interaction with the interviewee/interviewer. It is an introductory text preceding one or more questions generally.
@@ -27,7 +31,7 @@ An __instruction__ is a formal step to be completed by the interviewee/interview
 
 For instance: « Enter 0 if your business has not incurred any innovation expense. » or « Check off all appropriate boxes. ».
 
-DDI is a little bit “twisted” with the use of the element InstructionName for typing the instruction.
+
 
 ```xml
 <d:Instruction> 
