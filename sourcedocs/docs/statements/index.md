@@ -5,10 +5,16 @@
     For every XML snippet → We probably need to get rid of the `XHTML` tags, we don't do that anymore?
 
 A __Statement__ is a generic term that designates a textual element from the questionnaire (other than the question text, response modalities…).
-The different types of statement are: comment, instruction, help, or warning.
+The different types of statement are:
+
+- comment,
+- instruction,
+- help,
+- warning.
 
 ## DDI modelling of statements
-A statement is represented by a DDI [Instruction](https://ddialliance.github.io/ddimodel-web/DDI-L-3.3/item-types/Instruction/). The text displayed with the element InstructionText. 
+
+A statement is represented by a DDI [Instruction](https://ddialliance.github.io/ddimodel-web/DDI-L-3.3/item-types/Instruction/). The text displayed with the element InstructionText.
 For typing the instruction, DDI is a little bit “twisted” with the use of the element InstructionName.
 
 ## Type of statement : « Comment »
@@ -31,8 +37,6 @@ An __instruction__ is a formal step to be completed by the interviewee/interview
 
 For instance: « Enter 0 if your business has not incurred any innovation expense. » or « Check off all appropriate boxes. ».
 
-
-
 ```xml
 <d:Instruction> 
     <r:Agency>fr.insee</r:Agency> 
@@ -44,7 +48,7 @@ For instance: « Enter 0 if your business has not incurred any innovation expens
     <d:InstructionText> 
         <d:LiteralText> 
             <d:Text> 
-                <xhtml:p xml:lang="en-IE"><xhtml:i>Check off all appropriate boxes</xhtml:i></xhtml:p> 
+                Check off all appropriate boxes
             </d:Text>
         </d:LiteralText> 
     </d:InstructionText>
@@ -106,7 +110,7 @@ The first case below shows the “usual” and “correct” implementation in a
     <d:InstructionText> 
         <d:LiteralText> 
             <d:Text xml:lang="en-IE"> 
-                <xhtml:p id="ftn34">Expenses refers to the money spent on the goods</xhtml:p> 
+                Expenses refers to the money spent on the goods
             </d:Text> 
         </d:LiteralText> 
     </d:InstructionText>
@@ -121,8 +125,7 @@ The first case below shows the “usual” and “correct” implementation in a
 [...]
     <d:QuestionText> 
         <d:LiteralText> 
-            <d:Text> <xhtml:p><xhtml:b>Please estimate the expenses at the minimarket</xhtml:b></xhtml:p>
-            </d:Text> 
+            <d:Text> Please estimate the expenses at the minimarket</d:Text> 
         </d:LiteralText> 
     </d:QuestionText>
 [...]
@@ -149,10 +152,7 @@ The category which contains the tooltip reference is used à the row stub in a t
     </d:InstructionName>
     <d:InstructionText>
     <d:LiteralText>
-        <d:Text xml:lang="en-IE">
-            <xhtml:p id="ftn22">Ice cream refers to A soft frozen food made with sweetened and
-    flavoured milk fat.</xhtml:p>
-        </d:Text>
+        <d:Text xml:lang="en-IE">Ice cream refers to A soft frozen food made with sweetened and flavoured milk fat.</d:Text>
     </d:LiteralText>
 </d:InstructionText>
 </d:Instruction>
@@ -165,7 +165,7 @@ The category which contains the tooltip reference is used à the row stub in a t
     <r:Version>1</r:Version>
     <r:Label>
         <r:Content xml:lang="en-IE">
-            <xhtml:p>Ice cream<xhtml:a href="#ftn22"/></xhtml:p>
+            Ice cream
         </r:Content>
     </r:Label>
 </l:Category>
