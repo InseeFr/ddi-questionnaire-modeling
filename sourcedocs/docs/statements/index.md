@@ -1,9 +1,5 @@
 # Statements
 
-!!! question "Updating this documentation"
-
-    For every XML snippet → We probably need to get rid of the `XHTML` tags, we don't do that anymore?
-
 A __Statement__ is a generic term that designates a textual element from the questionnaire (other than the question text, response modalities…).
 The different types of statement are:
 
@@ -27,7 +23,7 @@ In DDI:
 
 ```xml
 <d:InstructionName> 
-    <r:String xml:lang="en-IE">Comment</r:String>
+    <r:String xml:lang="en-IE">comment</r:String>
 </d:InstructionName>
 ```
 
@@ -43,7 +39,7 @@ For instance: « Enter 0 if your business has not incurred any innovation expens
     <r:ID>INSEE-SIMPSONS-II-22</r:ID> 
     <r:Version>1</r:Version> 
     <d:InstructionName> 
-        <r:String xml:lang="en-IE">Instruction</r:String> 
+        <r:String xml:lang="en-IE">instruction</r:String> 
     </d:InstructionName> 
     <d:InstructionText> 
         <d:LiteralText> 
@@ -63,7 +59,7 @@ Example: « Include non-salary employees.»
 
 ```xml
 <d:InstructionName> 
-    <r:String xml:lang="en-IE">Help</r:String>
+    <r:String xml:lang="en-IE">help</r:String>
 </d:InstructionName>
 ```
 
@@ -74,7 +70,7 @@ For instance: « The sum of the respective turnover is not equal to the total tu
 
 ```xml
 <d:InstructionName> 
-    <r:String xml:lang="en-IE">Warning</r:String>
+    <r:String xml:lang="en-IE">warning</r:String>
 </d:InstructionName>
 ```
 
