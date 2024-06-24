@@ -452,6 +452,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#generative-use-of-ddi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generative use of DDI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading guide
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -474,6 +500,11 @@
 <p class="admonition-title">Updating this documentation</p>
 <p>Since the source material may not be always up to date with how we use the standard or how we implement questionnaires, those <code>question</code> blocks are here to mark when revisions or changes are needed.</p>
 </div>
+<h2 id="generative-use-of-ddi">Generative use of DDI</h2>
+<p>The reader of this guide need to have in mind the particular use of DDI for questionnaires and surveys at Insee: with a DDI specification of a questionnaire we produce various collection instruments (for web, paper or interviewer based surveys).</p>
+<p>It is an application of the <a href="https://www.insee.fr/en/information/4195079?sommaire=4195125#titre-bloc-25">metadata driven principle</a>.</p>
+<p>Thus some modeling choices are to be understood in the framework of this principle, and not in a more usual way of documenting questionnaires after the fact.</p>
+<h2 id="reading-guide">Reading guide</h2>
 <p>The questionnaire metamodel is comprised of description of the metadata necessary for constituting the questionnaire template: questions, variables, code lists, statements (instructions, help, comments, warnings) as well as the statement and question grouping and flow (question blocks), filtering and controls. This description will be based on the XML DDI (Data Description Initiative) metamodel in it current version of use.</p>
 <p>It is assumed below that all the XML-based DDI objects are identifiable, maintainable and versionable under the guise of a mandatory triple as follows (example):</p>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&lt;r:Agency&gt;</span>fr.insee<span class="nt">&lt;/r:Agency&gt;</span>
