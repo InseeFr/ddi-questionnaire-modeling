@@ -614,9 +614,15 @@
 <p>For every XML snippet → We probably need to get rid of the <code>XHTML</code> tags, we don't do that anymore?</p>
 </div>
 <p>A <strong>Statement</strong> is a generic term that designates a textual element from the questionnaire (other than the question text, response modalities…).
-The different types of statement are: comment, instruction, help, or warning.</p>
+The different types of statement are:</p>
+<ul>
+<li>comment,</li>
+<li>instruction,</li>
+<li>help,</li>
+<li>warning.</li>
+</ul>
 <h2 id="ddi-modelling-of-statements">DDI modelling of statements</h2>
-<p>A statement is represented by a DDI <a href="https://ddialliance.github.io/ddimodel-web/DDI-L-3.3/item-types/Instruction/">Instruction</a>. The text displayed with the element InstructionText. 
+<p>A statement is represented by a DDI <a href="https://ddialliance.github.io/ddimodel-web/DDI-L-3.3/item-types/Instruction/">Instruction</a>. The text displayed with the element InstructionText.
 For typing the instruction, DDI is a little bit “twisted” with the use of the element InstructionName.</p>
 <h2 id="type-of-statement-comment">Type of statement : « Comment »</h2>
 <p><strong>A comment</strong> is a statement which conveys quite a « generic » information on the context without interaction with the interviewee/interviewer. It is an introductory text preceding one or more questions generally.</p>
@@ -639,7 +645,7 @@ For typing the instruction, DDI is a little bit “twisted” with the use of th
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="nt">&lt;d:InstructionText&gt;</span><span class="w"> </span>
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="nt">&lt;d:LiteralText&gt;</span><span class="w"> </span>
 </span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">            </span><span class="nt">&lt;d:Text&gt;</span><span class="w"> </span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">                </span><span class="nt">&lt;xhtml:p</span><span class="w"> </span><span class="na">xml:lang=</span><span class="s">&quot;en-IE&quot;</span><span class="nt">&gt;&lt;xhtml:i&gt;</span>Check<span class="w"> </span>off<span class="w"> </span>all<span class="w"> </span>appropriate<span class="w"> </span>boxes<span class="nt">&lt;/xhtml:i&gt;&lt;/xhtml:p&gt;</span><span class="w"> </span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">                </span>Check<span class="w"> </span>off<span class="w"> </span>all<span class="w"> </span>appropriate<span class="w"> </span>boxes
 </span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">            </span><span class="nt">&lt;/d:Text&gt;</span>
 </span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span><span class="nt">&lt;/d:LiteralText&gt;</span><span class="w"> </span>
 </span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="nt">&lt;/d:InstructionText&gt;</span>
@@ -684,7 +690,7 @@ For instance: « The sum of the respective turnover is not equal to the total tu
 </span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="nt">&lt;d:InstructionText&gt;</span><span class="w"> </span>
 </span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">        </span><span class="nt">&lt;d:LiteralText&gt;</span><span class="w"> </span>
 </span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">            </span><span class="nt">&lt;d:Text</span><span class="w"> </span><span class="na">xml:lang=</span><span class="s">&quot;en-IE&quot;</span><span class="nt">&gt;</span><span class="w"> </span>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">                </span><span class="nt">&lt;xhtml:p</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;ftn34&quot;</span><span class="nt">&gt;</span>Expenses<span class="w"> </span>refers<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>money<span class="w"> </span>spent<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>goods<span class="nt">&lt;/xhtml:p&gt;</span><span class="w"> </span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">                </span>Expenses<span class="w"> </span>refers<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>money<span class="w"> </span>spent<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>goods
 </span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">            </span><span class="nt">&lt;/d:Text&gt;</span><span class="w"> </span>
 </span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">        </span><span class="nt">&lt;/d:LiteralText&gt;</span><span class="w"> </span>
 </span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="nt">&lt;/d:InstructionText&gt;</span>
@@ -697,18 +703,17 @@ For instance: « The sum of the respective turnover is not equal to the total tu
 </span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>[...]
 </span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="nt">&lt;d:QuestionText&gt;</span><span class="w"> </span>
 </span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">        </span><span class="nt">&lt;d:LiteralText&gt;</span><span class="w"> </span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">            </span><span class="nt">&lt;d:Text&gt;</span><span class="w"> </span><span class="nt">&lt;xhtml:p&gt;&lt;xhtml:b&gt;</span>Please<span class="w"> </span>estimate<span class="w"> </span>the<span class="w"> </span>expenses<span class="w"> </span>at<span class="w"> </span>the<span class="w"> </span>minimarket<span class="nt">&lt;/xhtml:b&gt;&lt;/xhtml:p&gt;</span>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">            </span><span class="nt">&lt;/d:Text&gt;</span><span class="w"> </span>
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">        </span><span class="nt">&lt;/d:LiteralText&gt;</span><span class="w"> </span>
-</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="nt">&lt;/d:QuestionText&gt;</span>
-</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>[...]
-</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">    </span><span class="nt">&lt;d:InterviewerInstructionReference&gt;</span>
-</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">        </span><span class="nt">&lt;r:Agency&gt;</span>fr.insee<span class="nt">&lt;/r:Agency&gt;</span><span class="w"> </span>
-</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">        </span><span class="nt">&lt;r:ID&gt;</span>INSEE-ANTIPOLV1-II-8<span class="nt">&lt;/r:ID&gt;</span>
-</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">        </span><span class="nt">&lt;r:Version&gt;</span>1<span class="nt">&lt;/r:Version&gt;</span><span class="w"> </span>
-</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">        </span><span class="nt">&lt;r:TypeOfObject&gt;</span>Instruction<span class="nt">&lt;/r:TypeOfObject&gt;</span><span class="w"> </span>
-</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">    </span><span class="nt">&lt;/d:InterviewerInstructionReference&gt;</span>
-</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="nt">&lt;/d:QuestionItem&gt;</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">            </span><span class="nt">&lt;d:Text&gt;</span><span class="w"> </span>Please<span class="w"> </span>estimate<span class="w"> </span>the<span class="w"> </span>expenses<span class="w"> </span>at<span class="w"> </span>the<span class="w"> </span>minimarket<span class="nt">&lt;/d:Text&gt;</span><span class="w"> </span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">        </span><span class="nt">&lt;/d:LiteralText&gt;</span><span class="w"> </span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="nt">&lt;/d:QuestionText&gt;</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>[...]
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">    </span><span class="nt">&lt;d:InterviewerInstructionReference&gt;</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">        </span><span class="nt">&lt;r:Agency&gt;</span>fr.insee<span class="nt">&lt;/r:Agency&gt;</span><span class="w"> </span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">        </span><span class="nt">&lt;r:ID&gt;</span>INSEE-ANTIPOLV1-II-8<span class="nt">&lt;/r:ID&gt;</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">        </span><span class="nt">&lt;r:Version&gt;</span>1<span class="nt">&lt;/r:Version&gt;</span><span class="w"> </span>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">        </span><span class="nt">&lt;r:TypeOfObject&gt;</span>Instruction<span class="nt">&lt;/r:TypeOfObject&gt;</span><span class="w"> </span>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">    </span><span class="nt">&lt;/d:InterviewerInstructionReference&gt;</span>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="nt">&lt;/d:QuestionItem&gt;</span>
 </span></code></pre></div>
 <h3 id="case-2-category-in-a-grid">Case 2: Category in a grid</h3>
 <p>The category which contains the tooltip reference is used à the row stub in a table.</p>
@@ -721,13 +726,10 @@ For instance: « The sum of the respective turnover is not equal to the total tu
 </span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="nt">&lt;/d:InstructionName&gt;</span>
 </span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="nt">&lt;d:InstructionText&gt;</span>
 </span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">    </span><span class="nt">&lt;d:LiteralText&gt;</span>
-</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">        </span><span class="nt">&lt;d:Text</span><span class="w"> </span><span class="na">xml:lang=</span><span class="s">&quot;en-IE&quot;</span><span class="nt">&gt;</span>
-</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">            </span><span class="nt">&lt;xhtml:p</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;ftn22&quot;</span><span class="nt">&gt;</span>Ice<span class="w"> </span>cream<span class="w"> </span>refers<span class="w"> </span>to<span class="w"> </span>A<span class="w"> </span>soft<span class="w"> </span>frozen<span class="w"> </span>food<span class="w"> </span>made<span class="w"> </span>with<span class="w"> </span>sweetened<span class="w"> </span>and
-</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">    </span>flavoured<span class="w"> </span>milk<span class="w"> </span>fat.<span class="nt">&lt;/xhtml:p&gt;</span>
-</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">        </span><span class="nt">&lt;/d:Text&gt;</span>
-</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">    </span><span class="nt">&lt;/d:LiteralText&gt;</span>
-</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="nt">&lt;/d:InstructionText&gt;</span>
-</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="nt">&lt;/d:Instruction&gt;</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">        </span><span class="nt">&lt;d:Text</span><span class="w"> </span><span class="na">xml:lang=</span><span class="s">&quot;en-IE&quot;</span><span class="nt">&gt;</span>Ice<span class="w"> </span>cream<span class="w"> </span>refers<span class="w"> </span>to<span class="w"> </span>A<span class="w"> </span>soft<span class="w"> </span>frozen<span class="w"> </span>food<span class="w"> </span>made<span class="w"> </span>with<span class="w"> </span>sweetened<span class="w"> </span>and<span class="w"> </span>flavoured<span class="w"> </span>milk<span class="w"> </span>fat.<span class="nt">&lt;/d:Text&gt;</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">    </span><span class="nt">&lt;/d:LiteralText&gt;</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="nt">&lt;/d:InstructionText&gt;</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="nt">&lt;/d:Instruction&gt;</span>
 </span></code></pre></div>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">&lt;l:Category&gt;</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="nt">&lt;r:Agency&gt;</span>fr.insee<span class="nt">&lt;/r:Agency&gt;</span>
@@ -735,7 +737,7 @@ For instance: « The sum of the respective turnover is not equal to the total tu
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="nt">&lt;r:Version&gt;</span>1<span class="nt">&lt;/r:Version&gt;</span>
 </span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="nt">&lt;r:Label&gt;</span>
 </span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">        </span><span class="nt">&lt;r:Content</span><span class="w"> </span><span class="na">xml:lang=</span><span class="s">&quot;en-IE&quot;</span><span class="nt">&gt;</span>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">            </span><span class="nt">&lt;xhtml:p&gt;</span>Ice<span class="w"> </span>cream<span class="nt">&lt;xhtml:a</span><span class="w"> </span><span class="na">href=</span><span class="s">&quot;#ftn22&quot;</span><span class="nt">/&gt;&lt;/xhtml:p&gt;</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">            </span>Ice<span class="w"> </span>cream
 </span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">        </span><span class="nt">&lt;/r:Content&gt;</span>
 </span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="nt">&lt;/r:Label&gt;</span>
 </span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="nt">&lt;/l:Category&gt;</span>
