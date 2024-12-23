@@ -27,6 +27,7 @@ nav:
   - Filter: "./filter"
   - Check: "./check"
   - Loop: "./loop"
+  - Roundabout: "./roundabout" 
   - Variable: "./variable"
   - Derived variable: "./derived-variable"
   - Update notes: "./update"
