@@ -472,6 +472,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic unit
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -532,6 +549,45 @@
 </span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">        </span><span class="nt">&lt;/r:CodeRepresentation&gt;</span>
 </span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">    </span><span class="nt">&lt;/l:VariableRepresentation&gt;</span>
 </span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="nt">&lt;/l:Variable&gt;</span>
+</span></code></pre></div>
+<h2 id="dynamic-unit">Dynamic unit</h2>
+<p>The unit of a numeric variable can be dynamically computed (for instance: currency in function of country).</p>
+<p>Then, the computation expression is defined in the <code>MeasurementUnit</code>. The element must have the <code>controlledVocabularyName</code> attribute with the value <code>"personalizedUnit"</code> to mark the unit as a dynamic (<em>personalized</em>) unit.
+The <code>¤</code> character is used as a delimiter around variable references.</p>
+<p>The following example contains a dynamic unit, whose expression is another variable:</p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">&lt;l:Variable&gt;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nt">&lt;r:Agency&gt;</span>fr.insee<span class="nt">&lt;/r:Agency&gt;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">&lt;r:ID&gt;</span>m4k4z3gv<span class="nt">&lt;/r:ID&gt;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nt">&lt;r:Version&gt;</span>1<span class="nt">&lt;/r:Version&gt;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nt">&lt;l:VariableName&gt;</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="nt">&lt;r:String</span><span class="w"> </span><span class="na">xml:lang=</span><span class="s">&quot;fr-FR&quot;</span><span class="nt">&gt;</span>NUMBER_DYNAMIC_UNIT<span class="nt">&lt;/r:String&gt;</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="nt">&lt;/l:VariableName&gt;</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="nt">&lt;r:Label&gt;</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="nt">&lt;r:Content</span><span class="w"> </span><span class="na">xml:lang=</span><span class="s">&quot;fr-FR&quot;</span><span class="nt">&gt;</span>NUMBER_DYNAMIC_UNIT<span class="w"> </span>label<span class="w"> </span><span class="nt">&lt;/r:Content&gt;</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="nt">&lt;/r:Label&gt;</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="nt">&lt;r:SourceParameterReference&gt;</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="nt">&lt;r:Agency&gt;</span>fr.insee<span class="nt">&lt;/r:Agency&gt;</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span><span class="nt">&lt;r:ID&gt;</span>m4k17d1t-QOP-m4k14nmx<span class="nt">&lt;/r:ID&gt;</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">        </span><span class="nt">&lt;r:Version&gt;</span>1<span class="nt">&lt;/r:Version&gt;</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">        </span><span class="nt">&lt;r:TypeOfObject&gt;</span>OutParameter<span class="nt">&lt;/r:TypeOfObject&gt;</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="nt">&lt;/r:SourceParameterReference&gt;</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="nt">&lt;r:QuestionReference&gt;</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">        </span><span class="nt">&lt;r:Agency&gt;</span>fr.insee<span class="nt">&lt;/r:Agency&gt;</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">        </span><span class="nt">&lt;r:ID&gt;</span>m4k17d1t<span class="nt">&lt;/r:ID&gt;</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">        </span><span class="nt">&lt;r:Version&gt;</span>1<span class="nt">&lt;/r:Version&gt;</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">        </span><span class="nt">&lt;r:TypeOfObject&gt;</span>QuestionItem<span class="nt">&lt;/r:TypeOfObject&gt;</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">    </span><span class="nt">&lt;/r:QuestionReference&gt;</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">    </span><span class="nt">&lt;l:VariableRepresentation&gt;</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">        </span><span class="nt">&lt;r:NumericRepresentation&gt;</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">            </span><span class="nt">&lt;r:MeasurementUnit</span><span class="w"> </span><span class="na">controlledVocabularyName=</span><span class="s">&quot;personalizedUnit&quot;</span><span class="nt">&gt;</span>¤m4k4zcl6-QOP-m4k5disb¤<span class="w"> </span><span class="nt">&lt;/r:MeasurementUnit&gt;</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">            </span><span class="nt">&lt;r:NumberRange&gt;</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">                </span><span class="nt">&lt;r:Low</span><span class="w"> </span><span class="na">isInclusive=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/r:Low&gt;</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">                </span><span class="nt">&lt;r:High</span><span class="w"> </span><span class="na">isInclusive=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>10<span class="nt">&lt;/r:High&gt;</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">            </span><span class="nt">&lt;/r:NumberRange&gt;</span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">            </span><span class="nt">&lt;r:NumericTypeCode</span><span class="w"> </span><span class="na">controlledVocabularyID=</span><span class="s">&quot;INSEE-CIS-NTC-CV&quot;</span><span class="nt">&gt;</span>Decimal<span class="nt">&lt;/r:NumericTypeCode&gt;</span>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">        </span><span class="nt">&lt;/r:NumericRepresentation&gt;</span>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">    </span><span class="nt">&lt;/l:VariableRepresentation&gt;</span>
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="nt">&lt;/l:Variable&gt;</span>
 </span></code></pre></div>
 
 
