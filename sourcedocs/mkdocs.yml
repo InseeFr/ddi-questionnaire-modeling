@@ -22,7 +22,9 @@ nav:
   - Statements: "./statements"
   - Question bank:
       - ALL: "./question-bank"
+      - Dynamic table: "./question-bank/dynamic-table.md"
       - Misc: "./question-bank/misc.md"
+  - Mandatory question: "./mandatory-question"
   - Parameters: "./parameters"
   - Filter: "./filter"
   - Check: "./check"
