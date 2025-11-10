@@ -6,9 +6,16 @@ A question can be marked as _mandatory_.
 
 Questions that have a single response are `d:QuestionItem` objects.
 
-Such questions are marked as _mandatory_ if the tag `<r:ResponseCardinality minimumResponses="1"/>` is present.
+Such questions are marked as _mandatory_ if the tag `<r:ResponseCardinality minimumResponses="1"/>` is present in the _response domain_.
 
-Example:
+The _response domain_ is for instance:
+
+- a `d:NominalDomain` object for a boolean question
+- a `d:TextDomain` object for a text question
+- a `d:NumericDomain` object for a numeric question
+- a `d:CodeDomain` object for a unique choice question
+
+Example (text question):
 
 `DDIInstance > g:ResourcePackage > d:QuestionScheme`
 
@@ -58,6 +65,16 @@ Example:
     </d:TextDomain>
 </d:QuestionItem>
 ```
+
+## Multiple response question
+
+Questions that have multiple response (e.g. multiple choice question, tables, dynamic tables) are `d:QuestionGrid` objects.
+
+The _response domain_ of a multiple response question is a `d:StructuredMixedGridResponseDomain` object.
+
+This object has no property that could represent a response cardinality.
+
+Then, for now, there is no modeling for the _mandatory_ nature of a multiple response question.
 
 ---
 
