@@ -33,3 +33,7 @@ In order to reduce the verbosity of the XML code which could impair its readabil
 Furthermore the XML chunks used in the examples, taken individually, are not syntactically valid and are for illustrative purposes only.
 
 _This document is a guide to good practices for modelling statistical questionnaires using DDI. The point is to make explicit the top (or mid)-level business object representation in DDI constituting a questionnaire. It does not give any detail on the DDI objects used, information provided by a DDI profile, to which the reader could refer if necessary._
+
+## DDI Lifecycle documentation
+
+A very helpful documentation for DDI objects is available at: https://docs.ddialliance.org/DDI-Lifecycle/3.3/model/
