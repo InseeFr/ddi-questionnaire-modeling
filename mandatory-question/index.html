@@ -531,6 +531,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#multiple-response-question" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple response question
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#namespaces" class="md-nav__link">
     <span class="md-ellipsis">
       Namespaces
@@ -558,8 +567,15 @@
 <p>A question can be marked as <em>mandatory</em>.</p>
 <h2 id="single-response-question">Single response question</h2>
 <p>Questions that have a single response are <code>d:QuestionItem</code> objects.</p>
-<p>Such questions are marked as <em>mandatory</em> if the tag <code>&lt;r:ResponseCardinality minimumResponses="1"/&gt;</code> is present.</p>
-<p>Example:</p>
+<p>Such questions are marked as <em>mandatory</em> if the tag <code>&lt;r:ResponseCardinality minimumResponses="1"/&gt;</code> is present in the <em>response domain</em>.</p>
+<p>The <em>response domain</em> is for instance:</p>
+<ul>
+<li>a <code>d:NominalDomain</code> object for a boolean question</li>
+<li>a <code>d:TextDomain</code> object for a text question</li>
+<li>a <code>d:NumericDomain</code> object for a numeric question</li>
+<li>a <code>d:CodeDomain</code> object for a unique choice question</li>
+</ul>
+<p>Example (text question):</p>
 <p><code>DDIInstance &gt; g:ResourcePackage &gt; d:QuestionScheme</code></p>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&lt;d:QuestionItem&gt;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&lt;r:Agency&gt;</span>fr.insee<span class="nt">&lt;/r:Agency&gt;</span>
@@ -606,6 +622,11 @@
 </span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="w">    </span><span class="nt">&lt;/d:TextDomain&gt;</span>
 </span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="nt">&lt;/d:QuestionItem&gt;</span>
 </span></code></pre></div>
+<h2 id="multiple-response-question">Multiple response question</h2>
+<p>Questions that have multiple response (e.g. multiple choice question, tables, dynamic tables) are <code>d:QuestionGrid</code> objects.</p>
+<p>The <em>response domain</em> of a multiple response question is a <code>d:StructuredMixedGridResponseDomain</code> object.</p>
+<p>This object has no property that could represent a response cardinality.</p>
+<p>Then, for now, there is no modeling for the <em>mandatory</em> nature of a multiple response question.</p>
 <hr />
 <h2 id="namespaces">Namespaces</h2>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">&lt;DDIInstance</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;ddi:instance:3_3&quot;</span>
