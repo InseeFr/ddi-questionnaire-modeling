@@ -74,8 +74,6 @@ Example (text question):
 
     Example:
 
-!!!
-
 ```xml
 <d:QuestionItem>
     <r:Agency>fr.insee</r:Agency>
