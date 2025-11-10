@@ -68,11 +68,11 @@ Example (text question):
 
 !!! warning "Particular case"
 
-The _response domain_ of a unique choice question that has an additional "details" text field is a `d:StructuredMixedResponseDomain` object.
+    The _response domain_ of a unique choice question that has an additional "details" text field is a `d:StructuredMixedResponseDomain` object.
 
-In that case, the _mandatory_ metadata (`minimumResponses="1"`) is placed in the `d:CodeDomain` within one of the `d:ResponseDomainInMixed"`.
+    In that case, the _mandatory_ metadata (`minimumResponses="1"`) is placed in the `d:CodeDomain` within one of the `d:ResponseDomainInMixed"`.
 
-Example:
+    Example:
 
 !!!
 
