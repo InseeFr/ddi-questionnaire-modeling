@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://inseefr.github.io/ddi-questionnaire-modeling/update/">
+        <link rel="canonical" href="https://inseefr.github.io/ddi-questionnaire-modeling/mandatory-question/">
       
       
       
@@ -18,7 +18,7 @@
     
     
       
-        <title>🚧 Update notes 🚧 - DDI questionnaire modeling</title>
+        <title>Mandatory question - DDI questionnaire modeling</title>
       
     
     
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#update-notes" class="md-skip">
+        <a href="#mandatory-question" class="md-skip">
           Aller au contenu
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              🚧 Update notes 🚧
+              Mandatory question
             
           </span>
         </div>
@@ -322,7 +322,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mandatory-question" class="md-nav__link">
+      <a href="." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -482,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="." class="md-nav__link">
+      <a href="../update" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -522,45 +522,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#linting" class="md-nav__link">
+  <a href="#single-response-question" class="md-nav__link">
     <span class="md-ellipsis">
-      Linting
+      Single response question
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#already-done" class="md-nav__link">
+  <a href="#namespaces" class="md-nav__link">
     <span class="md-ellipsis">
-      Already done
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#structure-of-the-documentation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Structure of the documentation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#graphical-representations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Graphical representations
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ddi-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      DDI code
+      Namespaces
     </span>
   </a>
   
@@ -581,47 +554,66 @@
                   
 
 
-<h1 id="update-notes"><img alt="🚧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f6a7.svg" title=":construction:" /> Update notes <img alt="🚧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f6a7.svg" title=":construction:" /></h1>
-<p>This section contains notes on what could or should be done in order to update this documentation.</p>
-<p>As mention in the <a href="/">home page</a>, the documentation is annotated with this kind of sections:</p>
-<div class="admonition question">
-<p class="admonition-title">Updating this documentation</p>
-<p>Some text.</p>
-</div>
-<p>which proposes some specific and in-place changes.</p>
-<p>For more general consideration, there is this page.</p>
-<h2 id="linting">Linting</h2>
-<p>The source markdown files could be linted using <a href="https://github.com/DavidAnson/markdownlin">Markdownlint</a>, in this case it could be sometimes better to <a href="https://github.com/DavidAnson/markdownlint/tree/v0.34.0?tab=readme-ov-file#configuration">escape some rules</a>.</p>
-<p>An example: when linking internally to a section of a page, Markdown lint could raise a warning with the fragment use. The code below:</p>
-<div class="language-markdown highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[...] previous use case [<span class="nt">Simple example « Hideable »</span>](<span class="na">#simple-example-hideable</span>) where « Greyed out » [...]
+<h1 id="mandatory-question">Mandatory question</h1>
+<p>A question can be marked as <em>mandatory</em>.</p>
+<h2 id="single-response-question">Single response question</h2>
+<p>Questions that have a single response are <code>d:QuestionItem</code> objects.</p>
+<p>Such questions are marked as <em>mandatory</em> if the tag <code>&lt;r:ResponseCardinality minimumResponses="1"/&gt;</code> is present.</p>
+<p>Example:</p>
+<p><code>DDIInstance &gt; g:ResourcePackage &gt; d:QuestionScheme</code></p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&lt;d:QuestionItem&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&lt;r:Agency&gt;</span>fr.insee<span class="nt">&lt;/r:Agency&gt;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&lt;r:ID&gt;</span>question-item-id<span class="nt">&lt;/r:ID&gt;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">&lt;r:Version&gt;</span>1<span class="nt">&lt;/r:Version&gt;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">&lt;d:QuestionItemName&gt;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="nt">&lt;r:String</span><span class="w"> </span><span class="na">xml:lang=</span><span class="s">&quot;fr-FR&quot;</span><span class="nt">&gt;</span>Q_MANDATORY<span class="nt">&lt;/r:String&gt;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nt">&lt;/d:QuestionItemName&gt;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="nt">&lt;r:OutParameter</span><span class="w"> </span><span class="na">isArray=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="nt">&lt;r:Agency&gt;</span>fr.insee<span class="nt">&lt;/r:Agency&gt;</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="nt">&lt;r:ID&gt;</span>question-item-id-QOP-out-param-id<span class="nt">&lt;/r:ID&gt;</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="nt">&lt;r:Version&gt;</span>1<span class="nt">&lt;/r:Version&gt;</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">        </span><span class="nt">&lt;r:ParameterName&gt;</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">            </span><span class="nt">&lt;r:String</span><span class="w"> </span><span class="na">xml:lang=</span><span class="s">&quot;fr-FR&quot;</span><span class="nt">&gt;</span>Q_MANDATORY<span class="nt">&lt;/r:String&gt;</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span><span class="nt">&lt;/r:ParameterName&gt;</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="nt">&lt;/r:OutParameter&gt;</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="nt">&lt;r:Binding&gt;</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">        </span><span class="nt">&lt;r:SourceParameterReference&gt;</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">            </span><span class="nt">&lt;r:Agency&gt;</span>fr.insee<span class="nt">&lt;/r:Agency&gt;</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">            </span><span class="nt">&lt;r:ID&gt;</span>question-item-id-RDOP-out-param-id<span class="nt">&lt;/r:ID&gt;</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">            </span><span class="nt">&lt;r:Version&gt;</span>1<span class="nt">&lt;/r:Version&gt;</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">            </span><span class="nt">&lt;r:TypeOfObject&gt;</span>OutParameter<span class="nt">&lt;/r:TypeOfObject&gt;</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">        </span><span class="nt">&lt;/r:SourceParameterReference&gt;</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">        </span><span class="nt">&lt;r:TargetParameterReference&gt;</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">            </span><span class="nt">&lt;r:Agency&gt;</span>fr.insee<span class="nt">&lt;/r:Agency&gt;</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">            </span><span class="nt">&lt;r:ID&gt;</span>question-item-id-QOP-out-param-id<span class="nt">&lt;/r:ID&gt;</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">            </span><span class="nt">&lt;r:Version&gt;</span>1<span class="nt">&lt;/r:Version&gt;</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">            </span><span class="nt">&lt;r:TypeOfObject&gt;</span>OutParameter<span class="nt">&lt;/r:TypeOfObject&gt;</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">        </span><span class="nt">&lt;/r:TargetParameterReference&gt;</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">    </span><span class="nt">&lt;/r:Binding&gt;</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">    </span><span class="nt">&lt;d:QuestionText&gt;</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">        </span><span class="nt">&lt;d:LiteralText&gt;</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">            </span><span class="nt">&lt;d:Text</span><span class="w"> </span><span class="na">xml:lang=</span><span class="s">&quot;fr-FR&quot;</span><span class="nt">&gt;</span>&quot;Mandatory<span class="w"> </span>question&quot;<span class="nt">&lt;/d:Text&gt;</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">        </span><span class="nt">&lt;/d:LiteralText&gt;</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">    </span><span class="nt">&lt;/d:QuestionText&gt;</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">    </span><span class="nt">&lt;d:TextDomain</span><span class="w"> </span><span class="na">maxLength=</span><span class="s">&quot;249&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">        </span><span class="nt">&lt;r:OutParameter</span><span class="w"> </span><span class="na">isArray=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">            </span><span class="nt">&lt;r:Agency&gt;</span>fr.insee<span class="nt">&lt;/r:Agency&gt;</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">            </span><span class="nt">&lt;r:ID&gt;</span>question-item-id-RDOP-out-param-id<span class="nt">&lt;/r:ID&gt;</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">            </span><span class="nt">&lt;r:Version&gt;</span>1<span class="nt">&lt;/r:Version&gt;</span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">            </span><span class="nt">&lt;r:TextRepresentation</span><span class="w"> </span><span class="na">maxLength=</span><span class="s">&quot;249&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="w">        </span><span class="nt">&lt;/r:OutParameter&gt;</span>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="w">        </span><span class="nt">&lt;r:ResponseCardinality</span><span class="w"> </span><span class="na">minimumResponses=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="w">    </span><span class="nt">&lt;/d:TextDomain&gt;</span>
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="nt">&lt;/d:QuestionItem&gt;</span>
 </span></code></pre></div>
-<p>will raise the warning <code>→ MD051/link-fragments: Link fragments should be valid</code> whereas in this case the fragment <code>#simple-example-hideable</code> is valid for MKDocs.</p>
-<p>To escape the rule, simply add an escape marker:</p>
-<div class="language-markdown highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&lt;!-- markdownlint-disable MD051 --&gt;
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>[...] previous use case [<span class="nt">Simple example « Hideable »</span>](<span class="na">#simple-example-hideable</span>) where « Greyed out » [...]
+<hr />
+<h2 id="namespaces">Namespaces</h2>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">&lt;DDIInstance</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;ddi:instance:3_3&quot;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">             </span><span class="na">xmlns:d=</span><span class="s">&quot;ddi:datacollection:3_3&quot;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">             </span><span class="na">xmlns:g=</span><span class="s">&quot;ddi:group:3_3&quot;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">             </span><span class="na">xmlns:r=</span><span class="s">&quot;ddi:reusable:3_3&quot;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">             </span><span class="na">xsi:schemaLocation=</span><span class="s">&quot;ddi:instance:3_3 https://www.ddialliance.org/Specification/DDI-Lifecycle/3.3/XMLSchema/instance.xsd&quot;</span><span class="nt">&gt;</span>
 </span></code></pre></div>
-<h2 id="already-done">Already done</h2>
-<ul>
-<li>Better indented XML is some cases</li>
-<li>Correct some XML</li>
-</ul>
-<h2 id="structure-of-the-documentation">Structure of the documentation</h2>
-<ol>
-<li>The <em>Question bank</em> section is huge, it should probably be splitted in N sub-sections (i.e. sub-pages). → https://github.com/InseeFr/ddi-questionnaire-modeling/issues/2</li>
-</ol>
-<h2 id="graphical-representations">Graphical representations</h2>
-<ol>
-<li>Should we use "abstract" graphical representations, or real-ones (using Stromae DSFR for example) ?</li>
-</ol>
-<h2 id="ddi-code">DDI code</h2>
-<ol>
-<li>When referencing a DDI element, we should choose and stick with a form:<ol>
-<li>AnElement / x:AnElement</li>
-<li><code>&lt;AnElement&gt;</code> / <code>&lt;x:AnElement&gt;</code></li>
-</ol>
-</li>
-<li>for the first or each use of an element, link to the definition in the field docs, <a href="https://ddialliance.github.io/ddimodel-web/DDI-L-3.3/">https://ddialliance.github.io/ddimodel-web/DDI-L-3.3/</a> for 3.3 for example ?</li>
-</ol>
 
 
 

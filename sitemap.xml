@@ -26,6 +26,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://inseefr.github.io/ddi-questionnaire-modeling/mandatory-question/</loc>
+         <lastmod>2025-11-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://inseefr.github.io/ddi-questionnaire-modeling/parameters/</loc>
          <lastmod>2025-11-10</lastmod>
          <changefreq>daily</changefreq>
