@@ -1,4 +1,4 @@
-# Uhoice choice question
+# Unique choice question
 
 ## Code list-based unique choice question
 
