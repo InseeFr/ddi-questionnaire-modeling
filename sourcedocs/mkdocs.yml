@@ -23,6 +23,7 @@ nav:
   - Question bank:
       - ALL: "./question-bank"
       - Dynamic table: "./question-bank/dynamic-table.md"
+      - Unique choice: "./question-bank/unique-choice-question.md"
       - Misc: "./question-bank/misc.md"
   - Mandatory question: "./mandatory-question"
   - Parameters: "./parameters"
